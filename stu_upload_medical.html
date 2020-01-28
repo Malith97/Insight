@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Upload Medical-Form</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="assets/vendor/parsleyjs/css/parsley.css">
+
+    <link rel="stylesheet" href="assets/vendor/dropify/css/dropify.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+
+<body class="theme-blue">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <form id="navbar-search" class="navbar-form search-form">
+                        <input value="" class="form-control" placeholder="Search here..." type="text">
+                        <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                    </form>
+
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="icon-bell"></i>
+                                    <span class="notification-dot"></span>
+                                </a>
+                                <ul class="dropdown-menu notifications">
+                                    <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="icon-info text-warning"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Campaign <strong>Holiday Sale</strong> is nearly
+                                                        reach budget limit.</p>
+                                                    <span class="timestamp">10:00 AM Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="footer"><a href="javascript:void(0);" class="more">See all
+                                            notifications</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar">
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="user-name"
+                            data-toggle="dropdown"><strong>Student</strong></a>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <span>Exp</span>
+                            <h6>14</h6>
+                        </li>
+                        <li class="col-4">
+                            <span>Awards</span>
+                            <h6>13</h6>
+                        </li>
+                        <li class="col-4">
+                            <span>Clients</span>
+                            <h6>213</h6>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Tab panes -->
+                <div class="tab-pane active" id="sub_menu">
+                    <div class="tab-pane" id="sub_menu">
+                        <nav class="sidebar-nav">
+                            <ul class="main-menu metismenu">
+                                <li class="active"><a href="stu_index.html"><i
+                                            class="icon-home"></i><span>Dashboard</span></a></li>
+                                <li><a href="javascript:void(0);" class="has-arrow"><i
+                                            class="icon-control-pause"></i><span>Lecture Notes</span> </a>
+                                    <ul>
+                                        <li><a href="stu_current_semesters.html">Current Semester</a></li>
+                                        <li><a href="stu_other_semesters.html">Other Semesters</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="stu_gpa.html"><i class="icon-users"></i><span>GPA Calculation</span></a>
+                                </li>
+                                <li><a href="stu_assignments.html"><i
+                                            class="icon-users"></i><span>Assignments</span></a></li>
+                                <li><a href="stu_quiz.html"><i class="icon-user"></i>Quizzes</a></li>
+                                <li><a href="stu_attendance.html"><i class="icon-users"></i><span>Attendance</span></a>
+                                </li>
+                                <li><a href="stu_marks.html"><i class="icon-users"></i><span>Marks</span></a></li>
+                                <li><a href="stu_chatapp.html"><i class="icon-users"></i><span>Chat-Box</span></a></li>
+                                <li><a href="javascript:void(0);" class="has-arrow"><i
+                                            class="icon-control-pause"></i><span>Other</span> </a>
+                                    <ul>
+                                        <li><a href="stu_upload_medical.html"><i
+                                                    class="icon-control-pause"></i><span>Medical</span> </a></li>
+                                        <li><a href="stu_staff.html"><i
+                                                    class="icon-control-pause"></i><span>Staff</span></a></li>
+                                        <li><a href="stu_view_notice.html"><i
+                                                    class="icon-control-pause"></i><span>Noticeboard</span> </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="body">
+                                <form role="form" action="PHP/stu_upload_data.php" method="post" enctype="multipart/form-data">
+                                    <h5>Student Details</h5>
+                                    <br>
+
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <select class="custom-select" id="intdrop_stu" name="intdrop_stu">
+                                                    <option selected>Choose Intake</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <select class="custom-select" id="degdrop_stu" name="degdrop_stu">
+                                                    <option selected>Select Degree Programme</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <select class="custom-select" id="reg_no" onchange="updatename(this.options[this.selectedIndex].getAttribute('stu_name'))" name="reg_no">
+                                                    <option selected>Select RegNO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Name" id="stu_name_dis" name="stu_name_dis" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <label>
+                                        <h5>Details of Medical Certificate</h5>
+                                    </label>
+
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <select class="custom-select" id="type" name="type">
+                                                    <option selected>Select Type</option>
+                                                    <option value="1">Government</option>
+                                                    <option value="2">Private</option>
+                                                    <option value="3">Ayurvedic</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Address" name="address" id="address">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Contact Number" name="contact" id="contact" 
+                                                    >
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Total No of Dates" name="no_of_dates" id="no_of_dates" 
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="demo-masked-input">
+                                                <div class="input-daterange input-group" data-provide="datepicker">
+                                                    <input type="text" class="input-sm form-control" name="start_date"
+                                                        placeholder="Staring Date">
+                                                    <span class="input-group-addon text-center"
+                                                        style="width: 40px;">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end_date"
+                                                        placeholder="Ending Date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <div class="input-group mb-3">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="file" name="file">
+                                                        <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div style="margin-left: 40%; margin-top: 2%;">
+                                <button type="submit" name="stu_up_medical" class="btn btn-success">Upload Medical</button>
+                                <button type="submit" class="btn btn-warning">Reset Form</button>
+                            </div>
+
+                            <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/bundles/libscripts.bundle.js"></script>
+    <script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+    <script src="assets/vendor/parsleyjs/js/parsley.min.js"></script>
+
+    <script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <!-- Bootstrap Colorpicker Js -->
+    <script src="assets/vendor/jquery-inputmask/jquery.inputmask.bundle.js"></script> <!-- Input Mask Plugin Js -->
+    <script src="assets/vendor/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="assets/vendor/multi-select/js/jquery.multi-select.js"></script> <!-- Multi Select Plugin Js -->
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <!-- Bootstrap Tags Input Plugin Js -->
+    <script src="assets/vendor/nouislider/nouislider.js"></script> <!-- noUISlider Plugin Js -->
+
+    <script src="assets/bundles/mainscripts.bundle.js"></script>
+    <script src="assets/js/pages/forms/advanced-form-elements.js"></script>
+
+    <script src="assets/bundles/datatablescripts.bundle.js"></script>
+    <script src="assets/vendor/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+    <script src="assets/vendor/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+    <script src="assets/vendor/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+    <script src="assets/vendor/jquery-datatable/buttons/buttons.html5.min.js"></script>
+    <script src="assets/vendor/jquery-datatable/buttons/buttons.print.min.js"></script>
+
+    <script src="assets/vendor/sweetalert/sweetalert.min.js"></script> <!-- SweetAlert Plugin Js -->
+
+    <script src="assets/js/pages/tables/jquery-datatable.js"></script>
+
+    <script src="assets/bundles/mainscripts.bundle.js"></script>
+
+    <script src="assets/vendor/dropify/js/dropify.min.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/pages/forms/dropify.js"></script>
+
+    <script src="JS/student.js"></script>
+
+    <script>
+        function updatename(stu_name){
+            console.log(stu_name);
+            document.getElementById("stu_name_dis").value = stu_name;
+        }
+    </script>
+    <script>
+        $(function () {
+            // validation needs name of the element
+            $('#food').multiselect();
+
+            // initialize after multiselect
+            $('#basic-form').parsley();
+        });
+    </script>
+</body>
+
+</html>

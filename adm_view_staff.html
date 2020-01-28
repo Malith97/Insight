@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Staff</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="adm_index.html"><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>                
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="user-name" data-toggle="dropdown"><strong>Admin</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav tabs -->
+            
+            <div class="tab-pane active" id="sub_menu">
+                <div class="tab-pane" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="adm_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Attendance</span> </a>
+                                <ul>
+                                    <li><a href="adm_update_attendance.html">Update Attendance</a></li>
+                                    <li><a href="adm_view_attendance.html">View Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="has-arrow"><i class="icon-users"></i><span>Time-Table</span></a>
+                                <ul>
+                                    <li><a href="adm_upload_timetable.html">Upload Time-Table</a></li>
+                                    <li><a href="adm_view_timetable.html">View Time-Table</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="adm_down_medical.html" class="active"><i class="icon-control-pause"></i><span>Medical Forms</span> </a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Noticeboard</span> </a>
+                                <ul>
+                                    <li><a href="adm_upload_notice.html">Update Noticeboard</a></li>
+                                    <li><a href="adm_view_notice.html">View Noticeboard</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Other</span> </a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Add</span> </a>
+                                    <ul>
+                                        <li><a href="adm_add_professors.html"><i class="icon-users"></i> <span>Professors</span></a></li>
+                                        <li><a href="adm_add_students.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>View</span> </a>
+                                    <ul>
+                                        <li><a href="adm_view_staff.html"><i class="icon-users"></i> <span>Staff</span></a></li>
+                                        <li><a href="adm_students_list.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>          
+                
+
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        </div>
+                        <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="body">
+                            <ul class="nav nav-tabs-new">
+                                <li class="nav-item" style="margin-right: 15px;"><a class="nav-link active" data-toggle="tab" href="#Permanent">Academic Staff</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Consultant">Non-academic Staff</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content padding-0">
+                        <div class="tab-pane active" id="Permanent">
+                            <div class="row clearfix" id="lec_view">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card member-card">
+                                        <div class="body">
+                                            <div class="member-thumb">
+                                                <img src="assets/images/lg/lec-5.jpg" class="img-fluid rounded" alt="profile-image">                               
+                                            </div>
+                                            <div class="detail">
+                                                <br>
+                                                <h5 class="m-b-0">Mrs.M Sirisooriya</h5>
+                                                <p class="text-muted">Biology</p>
+                                                <ul class="social-links list-inline m-t-20">
+                                                    <li><a title="facebook" href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a title="twitter" href="javascript:void(0);" ><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a title="instagram" href="javascript:void(0);" ><i class="fa fa-instagram"></i></a></li>
+                                                </ul>
+                                                <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
+                                                <a href="adm_lecturer_profile.html"  class="btn btn-default btn-simple">View Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- Non academic starts-->
+
+                        
+                        <div class="tab-pane" id="Consultant">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card member-card">
+                                        <div class="body">
+                                            <div class="member-thumb">
+                                                <img src="assets/images/lg/admin.jpg" class="img-fluid rounded" alt="profile-image">                               
+                                            </div>
+                                            <div class="detail">
+                                                <br>
+                                                <h5 class="m-b-0">Milindu Senaratne</h5>
+                                                <p class="text-muted">Admin</p>
+                                                <p class="text-muted">077 263 5969</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+
+<script src="JS/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Progression</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+<link rel="stylesheet" href="assets/vendor/parsleyjs/css/parsley.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>                
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="user-name" data-toggle="dropdown"><strong>Lecturer</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Tab panes -->
+            <div class="tab-pane active" id="sub_menu">
+                <div class="tab-pane" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="lec_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Lecture Notes</span> </a>
+                                <ul>
+                                    <li><a href="lec_upload_lecnotes.html">Upload Lecture Notes</a></li>
+                                    <li><a href="lec_view_lecnotes.html">View Lecture Notes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="has-arrow"><i class="icon-users"></i><span>Assignments</span></a>
+                                <ul>
+                                    <li><a href="lec_upload_assignments.html">Upload Assignments</a></li>
+                                    <li><a href="lec_view_assignments.html">View Assignments</a></li>
+                                    <li><a href="lec_down_assignments.html">Download Assignments</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Quiz</span> </a>
+                                <ul>
+                                    <li><a href="lec_upload_quiz.html">Upload Quiz</a></li>
+                                    <li><a href="lec_view_quiz.html">View Quiz</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Progression</span> </a>
+                                <ul>
+                                    <li><a href="lec_quiz_questions.html">Quiz Results</a></li>
+                                    <li><a href="lec_quiz_results.html">Overall</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Notice Board</span> </a>
+                                <ul>
+                                    <li><a href="lec_upload_notice.html">Upload Notice Board</a></li>
+                                    <li><a href="lec_view_notice.html">View Notice Board</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <!--leave this empty-->
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="body">
+                            <form id="basic-form" method="post" novalidate>
+
+                                <div class="col-lg-12">
+                                    <div class="card">
+
+                                        <div class="body">
+                                            <ul class="nav nav-tabs-new">
+                                                <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#Home-new">Intake 33</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Profile-new">Intake 34</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Contact-new">Intake 35</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Contact-old">Intake 36</a></li>
+                                            </ul>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="Home-new">
+                                                <h6></h6>
+
+                                                <!-- Lecture 01 Starting-->
+
+                                                    <div class="timeline-item blue">
+                                                    <span class="date">19-04-2018 - Today</span>
+                                                    <span>
+                                                        <a href="javascript:void(0);" title="">
+                                                            <h5>Quiz 01</h5>
+                                                        </a>
+
+                                                        <br> 
+
+                                                        <h6>Introduction to Information Security</h6>
+
+                                                    </span>
+
+                                                    <div class="msg">
+                                                        <br>
+
+                                                        <h7>Passed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" data-transitiongoal="72"></div>
+                                                        </div>
+
+
+                                                        <h7>Failed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-danger" data-transitiongoal="61"></div>
+                                                        </div>
+
+
+                                                        <h7>Not Submitted Percentage</h7>
+                                                        <div id="progress-striped" class="progress progress-striped">
+                                                            <div class="progress-bar progress-bar-warning" data-transitiongoal="39"></div>
+                                                        </div>
+
+                                                    <button type="button" class="btn btn-success" title="Save"><span class="sr-only">View</span> <i class="icon-info"></i></button>
+                                                    <button type="button" class="btn btn-danger" title="Delete"><span class="sr-only">Delete</span> <i class="icon-trash"></i></button>
+
+                                                    </div>
+                                                    </div>
+
+                                                    <!-- Lecture 01 Ending-->
+
+                                                    <!-- Lecture 02 Starting-->
+
+                                                    <div class="timeline-item blue">
+                                                    <span class="date">19-04-2018 - Yesterday</span>
+                                                    <span>
+                                                        <a href="javascript:void(0);" title="">
+                                                            <h5>Quiz 02</h5>
+                                                        </a>
+
+                                                        <br> 
+
+                                                        <h6>Big Data Analytics</h6>
+
+                                                    </span>
+
+                                                    <div class="msg">
+                                                        <br>
+
+                                                        <h7>Passed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" data-transitiongoal="25"></div>
+                                                        </div>
+
+
+                                                        <h7>Failed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-danger" data-transitiongoal="65"></div>
+                                                        </div>
+
+
+                                                        <h7>Not Submitted Percentage</h7>
+                                                        <div id="progress-striped" class="progress progress-striped">
+                                                            <div class="progress-bar progress-bar-warning" data-transitiongoal="15"></div>
+                                                        </div>
+
+                                                    <button type="button" class="btn btn-success" title="Save"><span class="sr-only">View</span> <i class="icon-info"></i></button>
+                                                    <button type="button" class="btn btn-danger" title="Delete"><span class="sr-only">Delete</span> <i class="icon-trash"></i></button>
+
+                                                    </div>
+                                                    </div>
+
+                                                    <!-- Lecture 01 Ending-->
+                                                
+                                            </div>
+
+                                            <div class="tab-pane" id="Profile-new">
+                                                    <div class="timeline-item blue">
+
+                                                    <span class="date">19-04-2018 - Today</span>
+                                                    <span>
+                                                        <a href="javascript:void(0);" title="">
+                                                            <h5>Quiz 03</h5>
+                                                        </a>
+
+                                                        <br> 
+
+                                                        <h6>Natural Language Processing</h6>
+
+                                                    </span>
+
+                                                    <div class="msg">
+                                                        <br>
+
+                                                        <h7>Passes Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" data-transitiongoal="82"></div>
+                                                        </div>
+
+
+                                                        <h7>Failed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-danger" data-transitiongoal="30"></div>
+                                                        </div>
+
+
+                                                        <h7>Not Submitted Percentage</h7>
+                                                        <div id="progress-striped" class="progress progress-striped">
+                                                            <div class="progress-bar progress-bar-warning" data-transitiongoal="10"></div>
+                                                        </div>
+
+                                                    <button type="button" class="btn btn-success" title="Save"><span class="sr-only">View</span> <i class="icon-info"></i></button>
+                                                    <button type="button" class="btn btn-danger" title="Delete"><span class="sr-only">Delete</span> <i class="icon-trash"></i></button>
+
+                                                    </div>
+                                                    </div>
+
+                                                    <!-- Lecture 01 Ending-->
+
+                                            </div>
+
+                                            <div class="tab-pane" id="Contact-new">
+                                                    <div class="timeline-item blue">
+
+                                                    <span class="date">19-08-2019</span>
+                                                    <span>
+                                                        <a href="javascript:void(0);" title="">
+                                                            <h5>Quiz 01</h5>
+                                                        </a>
+
+                                                        <br> 
+
+                                                        <h6>Data Structures & Algorithms</h6>
+
+                                                    </span>
+
+                                                    <div class="msg">
+                                                        <br>
+
+                                                        <h7>Passed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" data-transitiongoal="76"></div>
+                                                        </div>
+
+
+                                                        <h7>Failed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-danger" data-transitiongoal="10"></div>
+                                                        </div>
+
+
+                                                        <h7>Not Submitted Percentage</h7>
+                                                        <div id="progress-striped" class="progress progress-striped">
+                                                            <div class="progress-bar progress-bar-warning" data-transitiongoal="31"></div>
+                                                        </div>
+
+                                                    <button type="button" class="btn btn-success" title="Save"><span class="sr-only">View</span> <i class="icon-info"></i></button>
+                                                    <button type="button" class="btn btn-danger" title="Delete"><span class="sr-only">Delete</span> <i class="icon-trash"></i></button>
+
+                                                    </div>
+                                                    </div>
+
+                                                    <!-- Lecture 01 Ending-->
+                                            </div>
+
+                                            <div class="tab-pane" id="Contact-old">
+                                                    <div class="timeline-item blue">
+
+                                                    <span class="date">19-07-2019</span>
+                                                    <span>
+                                                        <a href="javascript:void(0);" title="">
+                                                            <h5>Quiz 01</h5>
+                                                        </a>
+
+                                                        <br> 
+
+                                                        <h6>Object Oriented Programming I</h6>
+
+                                                    </span>
+
+                                                    <div class="msg">
+                                                        <br>
+
+                                                        <h7>Passed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-success" data-transitiongoal="40"></div>
+                                                        </div>
+
+
+                                                        <h7>Failed Percentage</h7>
+                                                        <div id="progress-striped-active" class="progress progress-striped active">
+                                                            <div class="progress-bar progress-bar-danger" data-transitiongoal="10"></div>
+                                                        </div>
+
+
+                                                        <h7>Not Submitted Percentage</h7>
+                                                        <div id="progress-striped" class="progress progress-striped">
+                                                            <div class="progress-bar progress-bar-warning" data-transitiongoal="55"></div>
+                                                        </div>
+
+                                                    <button type="button" class="btn btn-success" title="Save"><span class="sr-only">View</span> <i class="icon-info"></i></button>
+                                                    <button type="button" class="btn btn-danger" title="Delete"><span class="sr-only">Delete</span> <i class="icon-trash"></i></button>
+
+                                                    </div>
+                                                    </div>
+
+                                                    <!-- Lecture 01 Ending-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                
+                                <br>
+
+                                <!--
+                                <div style="padding-bottom: 35px; padding-left: 350px;">
+                                    <button type="submit" class="btn btn-success">Update Attendance</button>
+                                    <button type="submit" class="btn btn-warning">Reset Form</button>
+                                    <button type="submit" class="btn btn-danger">Cancell</button>
+                                </div>-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+<script src="assets/vendor/parsleyjs/js/parsley.min.js"></script>
+
+<script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> <!-- Bootstrap Colorpicker Js --> 
+<script src="assets/vendor/jquery-inputmask/jquery.inputmask.bundle.js"></script> <!-- Input Mask Plugin Js --> 
+<script src="assets/vendor/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+<script src="assets/vendor/multi-select/js/jquery.multi-select.js"></script> <!-- Multi Select Plugin Js -->
+<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> <!-- Bootstrap Tags Input Plugin Js --> 
+<script src="assets/vendor/nouislider/nouislider.js"></script> <!-- noUISlider Plugin Js --> 
+    
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/forms/advanced-form-elements.js"></script>
+    
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script>
+    $(function() {
+        // validation needs name of the element
+        $('#food').multiselect();
+
+        // initialize after multiselect
+        $('#basic-form').parsley();
+    });
+</script>
+
+<script src="assets/vendor/bootstrap-progressbar/js/bootstrap-progressbar.min.js"></script>
+
+<script>
+$(function() {
+    $('#progress-format1 .progress-bar').progressbar({
+        display_text: 'fill'
+    });
+
+    $('#progress-format2 .progress-bar').progressbar({
+        display_text: 'fill',
+        use_percentage: false
+    });
+
+    $('#progress-custom-format .progress-bar').progressbar({
+        display_text: 'fill',
+        use_percentage: false,
+        amount_format: function(p, t) {
+            return p + ' of ' + t;
+        }
+    });
+
+    $('#progress-striped .progress-bar, #progress-striped-active .progress-bar, #progress-stacked .progress-bar').progressbar({
+        display_text: 'fill'
+    });
+
+    $('.progress.vertical .progress-bar').progressbar();
+    $('.progress.vertical.wide .progress-bar').progressbar({
+        display_text: 'fill'
+    });
+
+});
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Lecturer Profile</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="adm_index.html"><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>                
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>     
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Pro. William</strong></a>
+                    <ul class="dropdown-menu dropdown-menu-right account">
+                        <li><a href="professors-profile.html"><i class="icon-user"></i>My Profile</a></li>
+                        <li><a href="app-inbox.html"><i class="icon-envelope-open"></i>Messages</a></li>
+                        <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="page-login.html"><i class="icon-power"></i>Logout</a></li>
+                    </ul>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-pane active" id="sub_menu">
+                <div class="tab-pane" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="adm_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Attendance</span> </a>
+                                <ul>
+                                    <li><a href="adm_update_attendance.html">Update Attendance</a></li>
+                                    <li><a href="adm_view_attendance.html">View Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="has-arrow"><i class="icon-users"></i><span>Time-Table</span></a>
+                                <ul>
+                                    <li><a href="adm_upload_timetable.html">Upload Time-Table</a></li>
+                                    <li><a href="adm_view_timetable.html">View Time-Table</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="adm_down_medical.html" class="active"><i class="icon-control-pause"></i><span>Medical Forms</span> </a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Noticeboard</span> </a>
+                                <ul>
+                                    <li><a href="adm_upload_notice.html">Update Noticeboard</a></li>
+                                    <li><a href="adm_view_notice.html">View Noticeboard</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Other</span> </a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Add</span> </a>
+                                    <ul>
+                                        <li><a href="adm_add_professors.html"><i class="icon-users"></i> <span>Professors</span></a></li>
+                                        <li><a href="adm_add_students.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>View</span> </a>
+                                    <ul>
+                                        <li><a href="adm_view_staff.html"><i class="icon-users"></i> <span>Staff</span></a></li>
+                                        <li><a href="adm_students_list.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="profile-page">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        </div>
+                        <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card profile-header">
+                        <div class="body text-center">
+                            <div class="profile-image mb-3 text-center"> <img class="img-fluid rounded" src="assets/images/lg/lec-1.jpg" alt=""> </div>
+                            <div>
+                                <h4 class="m-b-0"><strong>Dr. LP Kalansooriya</strong></h4>
+                                <span class="job_post">Head – Department of Computer Science</span>
+                                <p>Senior Lecturer Gr. II</p>
+                            </div>
+                            <div>
+                                <a href="pradeepkalansooriya@kdu.ac.lk">pradeepkalansooriya@kdu.ac.lk</a>
+                            </div>
+                            <br>
+                            <p class="social-icon m-t-5 m-b-0">
+                                <a title="Twitter" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                <a title="Facebook" href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                                <a title="Google-plus" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                <a title="Behance" href="javascript:void(0);"><i class="fa fa-behance"></i></a>
+                                <a title="Instagram" href="javascript:void(0);"><i class="fa fa-instagram "></i></a>
+                            </p>
+                        </div>                    
+                    </div>                               
+                    <div class="card">
+                        <div class="header">
+                            <h2>Working Time</h2>
+                        </div>
+                        <div class="body">                            
+                            <div class="workingtime">                                
+                                <span class="text-muted">Monday to Friday</span>
+                                <p>08:00 AM - 4:00 PM</p>
+                                <hr>
+                                <span class="text-muted">Saturday</span>
+                                <p>09:00 AM - 12:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="header">
+                            <h2>Research Interests</h2>
+                        </div>
+                        <div class="body">                            
+                            <div class="workingtime">                                
+                                <ul>
+                                    <li>Human Computer Interaction</li>
+                                    <li>Affective Computing</li>
+                                    <li>Biomedical Engineering</li>
+                                    <li>Hologram Technology</li>
+                                    <li>Distance Learning</li>
+                                    <li>Technology in classroom</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="header">
+                            <h2>Professional Memberships</h2>
+                        </div>
+                        <div class="body">                            
+                            <div class="workingtime">                                
+                                <ul>
+                                    <li>Member of Japan Society of Kansei Engineering (JSKE)</li>
+                                    <li>Professional Member of Computer Society of Sri Lanka (CSSL)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="header">
+                            <h2>Scholarships</h2>
+                        </div>
+                        <div class="body">                            
+                            <div class="workingtime">                                
+                                <ul>
+                                    <li>Japanese Government Scholarship – Monbukagakusho(MEXT)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="header">
+                            <h2>Reviews</h2>
+                        </div>
+                        <div class="body"> 
+                            <div class="reviews">
+                                <span class="text-muted">Staff</span>
+                                <p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                </p>
+                                <span class="text-muted">Helpfulness</span>
+                                <p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                                <span class="text-muted">Knowledge</span>
+                                <p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                </p>
+                                <span class="text-muted">Cost</span>
+                                <p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                    <i class="fa fa-star-outline"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="card">
+                        <div class="body">
+                            <h5>About</h5><br>
+                            <div class="tab-content padding-0">
+                                <div class="tab-pane active" id="about">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in finibus neque. Vivamus in ipsum quis elit vehicula tempus vitae quis lacus. Vestibulum interdum diam non mi cursus venenatis. Morbi lacinia libero et elementum vulputate. Vivamus et facilisis mauris. Maecenas nec massa auctor, ultricies massa eu, tristique erat. Vivamus in ipsum quis elit vehicula tempus vitae quis lacus. Eu pellentesque, accumsan tellus leo, ultrices mi dui lectus sem nulla eu.Eu pellentesque, accumsan tellus leo, ultrices mi dui</p>                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="body">
+                            <h5>Qualifications</h5><br>
+                            <div class="tab-content padding-0">
+                                <div class="tab-pane active" id="about">
+                                    <ul>
+                                        <li>Doctor of Engineering of Information Science and Control Engineering– Nagaoka University of Technology, Japan</li>
+                                        <li>Master of Information Technology, Specialized in Management – University of Colombo, School of Computing, Sri Lanka</li>
+                                        <li>Bachelor of Science – Faculty of Science, University of Peradeniya, Sri Lanka</li>
+                                    </ul>                                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="body">
+                            <h5>Working Experience</h5><br>
+                            <div class="tab-content padding-0">
+                                <div class="tab-pane active" id="about">
+                                    <ul>
+                                        <li>Head of the Department at Department of Computer Science (2018 September– to present), Faculty of Computing, General Sir John Kotelawala Defence University, Sri Lanka</li>
+                                        <li>Head of the Department at Department of Information Technology (2017 September– to 2018 September), Faculty of Computing, General Sir John Kotelawala Defence University, Sri Lanka</li>
+                                        <li>Senior Lecturer (2017 January– to present) at Faculty of Computing, General Sir John Kotelawala Defence University, Sri Lanka</li>
+                                        <li>Academic Sponsor (2017 February – to present) at The Defence Service Command and Staff College, Batalanda, Sri Lanka</li>
+                                        <li>Course Coordinator of MBA in e-Governance Programme (2017 – to 2018), Faculty of Graduate Studies, General Sir John Kotelawala Defence University, Sri Lanka</li>
+                                        <li>Quality Assurance Cell Member (2017 May – to present), Faculty of Computing, General Sir John Kotelawala Defence University, Sri Lanka</li>
+                                        <li>Seriously engaging with preparing of new By-Law Document as a Member of the Committee (2017 April – to present), Faculty of Computing, General Sir John Kotelawala Defence University, Sri Lanka</li>
+                                        <li>Researcher in bio-signal integrated virtual reality (2015 – 2016) at Ambient Biomedical Engineering Laboratory, Nagaoka University of Technology, Japan</li>
+                                        <li>Researcher in developing a Hologram based digital learning platform for enhancing the online presence of engineering education (2013 – 2016) at Kansei Informatics Laboratory, Nagaoka University of Technology, Japan</li>
+                                        <li>Computer Programmer (2008 – 2013), Information Technology Division, National Savings Bank, Sri Lanka</li>
+                                        <li>Student Organizer (2013), International Conference on Energy, Environment and Human Engineering(ICEEHE), Yangon, Myanmar</li>
+                                        <li>Student Instructor (2006 – 2007) – Information Technology Center University of Peradeniya, Sri Lanka</li>
+                                        <li>Responsible for supporting the Network handling, Lab session handling and Student Guidance.</li>
+                                        <li>Visiting Instructor of World Bank IRQUE Project (2007), University of Peradeniya, Sri Lanka.</li>
+                                        <li>Responsible for Practical class on Information Technology</li>
+                                        <li>Conduct lectures in Fundamentals of IT for Art Faculty students of University of Peradeniya</li>
+
+                                    </ul>                                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="body">
+                            <h5>Publications</h5><br>
+                            <div class="tab-content padding-0">
+                                <div class="tab-pane active" id="about">
+                                    <ul>
+                                        <li>“An adaptive multimodal approach to user behavior sensing social network application”, Piumi Ishanka, Ashu Marasinghe and Pradeep Kalansooriya, The 3rd International GIGAKU Conference, 2014.</li>
+                                        <li>“The effect of a bio-signal interactive virtual reality on subjective impression – a preliminary study”, Pradeep Kalansooriya, Yamato Mitsui, Shoichiro Takaki, Masanori Kinefuchi, Aya Takahashi and Shusaku Nomura, International Journal of Affective Engineering, Vol. 15, no. 3, pp. 317-323, 2016</li>
+                                        <li>“Assessing the Applicability of 3D Holographic Technology as an Enhanced Technology for Distance Learning”, Pradeep Kalansooriya, Ashu Marasinghe and K.M.D.N. Bandara, The IAFOR Journal of Education, Volume 3-Issue 2 – Summer 2015</li>
+                                        <li>“Developing an Innovative Digital Learning Platform in Enhancing the Online Presence of Japanese KOSEN System”, Pradeep Kalansooriya, Ashu Marasinghe and Piumi Ishanka, The 3rd International GIGAKU Conference, 2014</li>
+                                        <li>“A Visual Interface for Emotion-based Music Navigation using Subjective and Objective Measures of Emotion Perception”, Sugeeswari Lekamge, Ashu Marasinghe, Pradeep Kalansooriya, and Shusaku Nomura, International Journal of Affective Engineering, 2016</li>
+                                        <li>“Digital Diary System Events Associate with Fragrance”, Prabath Weerasinghe, Ashu Marasinghe, Pradeep Kalansooriya and Chamara Liyanage, The 3rd International GIGAKU Conference, 2014</li>
+                                        <li>“PCA based Visualization of Digital Music Libraries in Assisting Emotion-Based Music Navigation”, Sugeeswari Lekamge, Ashu Marasinghe and Pradeep Kalansooriya, The 3rd International GIGAKU Conference, 2014</li>
+                                        <li>“Light Interface for 3D Hand Motional Gesture Recognition in Human Computer Interaction”, LP Kalansooriya, AMC Priyashantha, 11th International Research Conference of General Sir John Kotelawala Defence University, 2018</li>
+                                    </ul>                                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob Plugin Js -->
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+</body>
+
+</html>

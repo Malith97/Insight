@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Attendance</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css" />
+    <link rel="stylesheet" href="assets/vendor/morrisjs/morris.min.css" />
+    <link rel="stylesheet" href="assets/vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+
+<body class="theme-blue">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <form id="navbar-search" class="navbar-form search-form">
+                        <input value="" class="form-control" placeholder="Search here..." type="text">
+                        <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                    </form>
+
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="icon-bell"></i>
+                                    <span class="notification-dot"></span>
+                                </a>
+                                <ul class="dropdown-menu notifications">
+                                    <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="icon-info text-warning"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Campaign <strong>Holiday Sale</strong> is nearly
+                                                        reach budget limit.</p>
+                                                    <span class="timestamp">10:00 AM Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="footer"><a href="javascript:void(0);" class="more">See all
+                                            notifications</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar">
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="user-name"
+                            data-toggle="dropdown"><strong>Student</strong></a>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <span>Exp</span>
+                            <h6>14</h6>
+                        </li>
+                        <li class="col-4">
+                            <span>Awards</span>
+                            <h6>13</h6>
+                        </li>
+                        <li class="col-4">
+                            <span>Clients</span>
+                            <h6>213</h6>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-pane active" id="sub_menu">
+                    <div class="tab-pane" id="sub_menu">
+                        <nav class="sidebar-nav">
+                            <ul class="main-menu metismenu">
+                                <li class="active"><a href="stu_index.html"><i
+                                            class="icon-home"></i><span>Dashboard</span></a></li>
+                                <li><a href="javascript:void(0);" class="has-arrow"><i
+                                            class="icon-control-pause"></i><span>Lecture Notes</span> </a>
+                                    <ul>
+                                        <li><a href="stu_current_semesters.html">Current Semester</a></li>
+                                        <li><a href="stu_other_semesters.html">Other Semesters</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="stu_gpa.html"><i class="icon-users"></i><span>GPA Calculation</span></a>
+                                </li>
+                                <li><a href="stu_assignments.html"><i
+                                            class="icon-users"></i><span>Assignments</span></a></li>
+                                <li><a href="stu_quiz.html"><i class="icon-user"></i>Quizzes</a></li>
+                                <li><a href="stu_attendance.html"><i class="icon-users"></i><span>Attendance</span></a>
+                                </li>
+                                <li><a href="stu_marks.html"><i class="icon-users"></i><span>Marks</span></a></li>
+                                <li><a href="stu_chatapp.html"><i class="icon-users"></i><span>Chat-Box</span></a></li>
+                                <li><a href="javascript:void(0);" class="has-arrow"><i
+                                            class="icon-control-pause"></i><span>Other</span> </a>
+                                    <ul>
+                                        <li><a href="stu_upload_medical.html"><i
+                                                    class="icon-control-pause"></i><span>Medical</span> </a></li>
+                                        <li><a href="stu_staff.html"><i
+                                                    class="icon-control-pause"></i><span>Staff</span></a></li>
+                                        <li><a href="stu_view_notice.html"><i
+                                                    class="icon-control-pause"></i><span>Noticeboard</span> </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                            <div class="bh_chart hidden-xs">
+                            </div>
+                            <div class="bh_chart hidden-sm">
+                            </div>
+                            <div class="bh_chart hidden-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-8">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Basic Example 3</h2>
+                            </div>
+                            <div class="body table-responsive">
+                                <table class="table table-hover m-b-0" id="medic_list">
+                                    <thead>
+                                        <tr>
+                                            <th>Media</th>
+                                            <th>Name</th>
+                                            <th>Spent</th>
+                                            <th>Change</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <h6 class="margin-0">Facebook Ads</h6>
+                                            </td>
+                                            <td>
+                                                <h6 class="m-b-0">$ 402</h6>
+                                            </td>
+                                            <td class="text-right">
+                                                <div class="text-muted">up</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-twitter fa-2x"></i>
+                                            </td>
+                                            <td>
+                                                <h6 class="margin-0">Twitter Ads</h6>
+                                                <span>1k Likes, 128 Shares</span>
+                                            </td>
+                                            <td>
+                                                <h6 class="m-b-0">$ 489</h6>
+                                                <span class="text-muted">Spent</span>
+                                            </td>
+                                            <td class="text-right">
+                                                <div class="text-danger">                                                    
+                                                    -9 <i class="fa fa-long-arrow-down"></i>
+                                                </div>
+                                                <div class="text-muted">down</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-instagram fa-2x"></i>
+                                            </td>
+                                            <td>
+                                                <h6 class="margin-0">Instagram Post</h6>
+                                                <span>1k Follows, 228 Likes</span>
+                                            </td>
+                                            <td>
+                                                <h6 class="mb-0">$ 718 </h6>
+                                                <span class="text-muted">Spent</span>
+                                            </td>
+                                            <td class="text-right">
+                                                <div class=" text-success">
+                                                    16 <i class="fa  fa-long-arrow-up"></i>
+                                                </div>
+                                                <div class="text-muted">up</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-linkedin fa-2x"></i>
+                                            </td>
+                                            <td>
+                                                <h6 class="margin-0">LinkedIn Post</h6>
+                                                <span>1k Follows, 228 Likes</span>
+                                            </td>
+                                            <td>
+                                                <h6 class="mb-0">$ 768</h6>
+                                                <span class="text-muted">Spent</span>
+                                            </td>
+                                            <td class="text-right">
+                                                <div class=" text-success">
+                                                    27 <i class="fa  fa-long-arrow-up"></i>
+                                                </div>
+                                                <div class="text-muted">up</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-google-plus-circle fa-2x"></i>
+                                            </td>
+                                            <td>
+                                                <h6 class="margin-0">Google +</h6>
+                                                <span>1k Follows, 228 Likes</span>
+                                            </td>
+                                            <td>
+                                                <h6 class="mb-0">$ 1768</h6>
+                                                <span class="text-muted">Spent</span>
+                                            </td>
+                                            <td class="text-right">
+                                                <div class=" text-success">
+                                                    27 <i class="fa fa-long-arrow-up"></i>
+                                                </div>
+                                                <div class="text-muted">up</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4" id="tot_percent">
+                        <!--<div class="card">
+                            <div class="body text-center" >
+                                <h4 class="margin-0 header">Total Attendance</h4>
+                                <h6 class="m-b-20"></h6>
+                                <br>
+                                <input type="text" class="knob2" value="0" data-width="130" data-height="130"
+                                    data-thickness="0.25" data-angleArc="250" data-angleoffset="-125"
+                                    data-fgColor="#0dab02" readonly>
+                                <h2 class="margin-0 header">Good</h2>
+                                <h6 class="margin-0 header">Present Dates : 12</h6>
+                                <h6 class="margin-0 header">Absent Dates  : 4</h6>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Table Filter</h2>
+                            </div>
+                            <div class="body">
+                                <div class="table-responsive m-t-20">
+                                    <table class="table table-filter table-hover m-b-0" id="attendance_summery"></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/bundles/libscripts.bundle.js"></script>
+        <script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+        <script src="assets/bundles/chartist.bundle.js"></script>
+        <script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
+        <script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+        <script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
+
+        <script src="assets/bundles/flotscripts.bundle.js"></script> <!-- flot charts Plugin Js -->
+        <script src="assets/vendor/flot-charts/jquery.flot.selection.js"></script>
+
+
+        <script src="assets/bundles/mainscripts.bundle.js"></script>
+        <script src="assets/js/pages/charts/chart-widgets.js"></script>
+
+        <script src="assets/bundles/chartist.bundle.js"></script>
+        <script src="assets/vendor/chartist/polar_area_chart.js"></script><!-- Polar Area Chart Js -->
+        <script src="assets/js/pages/charts/chartjs.js"></script>
+
+        <script src="assets/vendor/bootstrap-progressbar/js/bootstrap-progressbar.min.js"></script>
+
+        <script>
+            var sid = localStorage.getItem("sid");
+            $.ajax({        //Load Attendace summary
+                url: 'PHP/stu_data.php',
+                method: 'post',
+                data: 'stu_att_subs=' + sid 
+            }).done(function (stu_att_sum) {
+                //console.log(stu_att_sum);
+                stu_att_sum = JSON.parse(stu_att_sum);
+                //console.log(stu_att_sum);
+                
+                $('#attendance_summery').empty();
+                $('#attendance_summery').append('<thead><th>No</th><th>Module</th><th>Progress</th><th>Status</th></thead><tbody>');
+
+                stu_att_sum.forEach(function (stu_att_sum) {
+                    $('#attendance_summery').append('<tr data-status="approved"><td>' + stu_att_sum.ID + '</td><td>' + stu_att_sum.ModuleName + '</td><td><div class="progress progress-xs"><div class="progress-bar l-green" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: ' + stu_att_sum.Pct + '%;"></div></div></td><td><strong>' + Math.round(stu_att_sum.Pct) + ' %</strong></td></tr>');
+                })
+                $('#attendance_summery').append('</tbody>');
+            });  
+
+            $.ajax({        //Load Attendace summary
+                url: 'PHP/stu_data.php',
+                method: 'post',
+                data: 'stu_att_tot=' + sid 
+            }).done(function (stu_tot_att) {
+                //console.log(stu_tot_att);
+                stu_tot_att = JSON.parse(stu_tot_att);
+                //console.log(stu_tot_att[0].Pct); //undefinedddd??????
+                //var inputF = document.getElementById("tot_percent");
+                //inputF.value = "90"; 
+                //$("#tot_percent ").load(" #tot_percent");
+                //inputF.value = "10";
+                //$('#tot_percent').empty();
+                document.getElementById('tot_percent').innerHTML = '<div class="card"><div class="body text-center" ><h4 class="margin-0 header">Total Attendance</h4><h6 class="m-b-20"></h6><br><input type="text" class="knob2" value="'+Math.round(stu_tot_att[0].Pct)+'" data-width="130" data-height="130"data-thickness="0.25" data-angleArc="250" data-angleoffset="-125"data-fgColor="#0dab02" readonly><h2 class="margin-0 header">Good</h2></div></div>';
+                //$('#tot_percent').html('<div class="card"><div class="body text-center" ><h4 class="margin-0 header">Total Attendance</h4><h6 class="m-b-20"></h6><br><input type="text" class="knob2" value="20" data-width="130" data-height="130"data-thickness="0.25" data-angleArc="250" data-angleoffset="-125"data-fgColor="#0dab02" readonly><h2 class="margin-0 header">Good</h2><h6 class="margin-0 header">Present Dates : 12</h6><h6 class="margin-0 header">Absent Dates  : 4</h6></div></div>');
+            });  
+        
+        $.ajax({        //Load mediacl
+            url: 'PHP/stu_data.php',
+            method: 'post',
+            data: 'stu_att_medical=' + sid 
+        }).done(function (stu_att_med) {
+            console.log(stu_att_med);
+            stu_att_med = JSON.parse(stu_att_med);
+            console.log(stu_att_med);
+            
+            $('#medic_list').empty();
+            $('#medic_list').append('<thead><tr><th>Medical ID</th><th>Submitted Date</th><th>No of Dates</th><th>Status</th></tr></thead><tbody>');
+
+            stu_att_med.forEach(function (stu_att_med) {
+                $('#medic_list').append('<tr><td>' + stu_att_med.med_id + '</td><td>' + stu_att_med.submit_date + '</td><td>' + stu_att_med.no_dates + '</td><td>' + status_btn(stu_att_med.status) +'</td>');
+            })
+            $('#medic_list').append('</tbody>');
+        }); 
+
+        function status_btn(str){
+            var temp ="";
+            if(str==-1){temp ='<span class="badge badge-danger m-b-0">Rejected</span>';}
+            else if(str==0){temp ='<span class="badge badge-warning m-b-0">Pending</span>';}
+            else if(str==1){temp ='<span class="badge badge-success m-b-0">Accepted</span>';}
+            else {temp ='<span class="badge badge-warning m-b-0">Pending</span>';}
+            return temp;
+        } 
+    
+        </script>
+
+        <script>
+            $(function() {
+                $('#progress-format1 .progress-bar').progressbar({
+                    display_text: 'fill'
+                });
+
+                $('#progress-format2 .progress-bar').progressbar({
+                    display_text: 'fill',
+                    use_percentage: false
+                });
+
+                $('#progress-custom-format .progress-bar').progressbar({
+                    display_text: 'fill',
+                    use_percentage: false,
+                    amount_format: function(p, t) {
+                        return p + ' of ' + t;
+                    }
+                });
+
+                $('#progress-striped .progress-bar, #progress-striped-active .progress-bar, #progress-stacked .progress-bar').progressbar({
+                    display_text: 'fill'
+                });
+
+                $('.progress.vertical .progress-bar').progressbar();
+                $('.progress.vertical.wide .progress-bar').progressbar({
+                    display_text: 'fill'
+                });
+
+            });
+        </script>
+
+</body>
+
+</html>

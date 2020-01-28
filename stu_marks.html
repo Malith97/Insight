@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Marks</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="user-name" data-toggle="dropdown"><strong>Student</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-pane active" id="sub_menu">
+                <div class="tab-pane" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="stu_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Lecture Notes</span> </a>
+                                <ul>
+                                    <li><a href="stu_current_semester.html">Current Semester</a></li>
+                                    <li><a href="stu_semester.html">Other Semesters</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="stu_gpa.html"><i class="icon-users"></i><span>GPA Calculation</span></a></li>
+                            <li><a href="stu_assignments.html"><i class="icon-users"></i><span>Assignments</span></a></li>
+                            <li><a href="stu_quiz.html"><i class="icon-user"></i>Quizzes</a></li>
+                            <li><a href="stu_attendance.html"><i class="icon-users"></i><span>Attendance</span></a></li>
+                            <li><a href="stu_marks.html"><i class="icon-users"></i><span>Marks</span></a></li>
+                            <li><a href="stu_chatapp.html"><i class="icon-users"></i><span>Chat-Box</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Other</span> </a>
+                                <ul>
+                                    <li><a href="stu_upload_medical.html"><i class="icon-control-pause"></i><span>Medical</span> </a></li>
+                                    <li><a href="stu_staff.html"><i class="icon-control-pause"></i><span>Staff</span></a></li>
+                                    <li><a href="stu_view_notice.html"><i class="icon-control-pause"></i><span>Noticeboard</span> </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <div class="bh_chart hidden-xs">
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Marks Table</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-md-12 ">
+                                    <div class="form-group">
+                                        <select class="custom-select" id="stu_mark_sem_drop">
+                                            <option selected>Select  Semester</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="3">4</option>
+                                                <option value="1">5</option>
+                                                <option value="2">6</option>
+                                                <option value="3">7</option>
+                                                <option value="3">8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn  btn-simple btn-sm btn-default btn-filter" data-target="all">All</button>
+                            <button type="button" class="btn  btn-simple btn-sm btn-success btn-filter" data-target="approved">Passed</button>
+                            <button type="button" class="btn  btn-simple btn-sm btn-danger btn-filter" data-target="suspended">Failed</button>
+                            <!--<button type="button" class="btn  btn-simple btn-sm btn-info btn-filter" data-target="pending">Pending</button>
+                            <button type="button" class="btn  btn-simple btn-sm btn-warning btn-filter" data-target="blocked">Blocked</button>-->
+                            <div class="table-responsive m-t-20">
+                                <table class="table table-filter table-hover m-b-0" id="marks_table">                                
+                                    <!--<tbody>
+                                        <thead>
+                                            <tr data-status="approved">
+                                                <td>No</td>
+                                                <td></td>
+                                                <td>Module</td>
+                                                <td>Mark</td>
+                                                <td></td>
+                                                <td><span class="badge badge-outline-dark">Status</span></td>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tr data-status="approved">
+                                            <td>1</td>
+                                            <td></td>
+                                            <td>PS</td>
+                                            <td>D-</td>
+                                            <td></td>
+                                            <td><span class="badge badge-danger">Failed</span></td>
+                                        </tr>
+                                        <tr data-status="suspended">
+                                            <td>2</td>
+                                            <td></td>
+                                            <td>DM</td>
+                                            <td>A+</td>
+                                            <td></td>
+                                            <td><span class="badge badge-success">Passed</span></td>
+                                        </tr>
+                                        <tr data-status="suspended">
+                                            <td>3</td>
+                                            <td></td>
+                                            <td>CNW</td>
+                                            <td>C+</td>
+                                            <td></td>
+                                            <td><span class="badge badge-success">Passed</span></td>
+                                        </tr>
+                                        <tr data-status="approved">
+                                            <td>4</td>
+                                            <td></td>
+                                            <td>DM</td>
+                                            <td>D-</td>
+                                            <td></td>
+                                            <td><span class="badge badge-danger">Failed</span></td>
+                                        </tr>
+                                        <tr data-status="approved">
+                                            <td>5</td>
+                                            <td></td>
+                                            <td>OS</td>
+                                            <td>A-</td>
+                                            <td></td>
+                                            <td><span class="badge badge-danger">Failed</span></td>
+                                        </tr>
+                                        <tr data-status="suspended">
+                                            <td>6</td>
+                                            <td></td>
+                                            <td>SPE</td>
+                                            <td>B</td>
+                                            <td></td>
+                                            <td><span class="badge badge-success">Passed</span></td>
+                                        </tr>
+                                        <tr data-status="suspended">
+                                            <td>7</td>
+                                            <td></td>
+                                            <td>GPSD</td>
+                                            <td>A</td>
+                                            <td></td>
+                                            <td><span class="badge badge-success">Passed</span></td>
+                                        </tr>
+                                    </tbody>-->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script>
+    $('.sparkbar').sparkline('html', { type: 'bar' });
+</script>
+
+<script>
+        $(document).ready(function () {
+            $('.star').on('click', function () {
+                $(this).toggleClass('star-checked');
+            });
+    
+            $('.ckbox label').on('click', function () {
+                $(this).parents('tr').toggleClass('selected');
+            });
+    
+            $('.btn-filter').on('click', function () {
+                var $target = $(this).data('target');
+                if ($target != 'all') {
+                    $('.table tr').css('display', 'none');
+                    $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+                } else {
+                    $('.table tr').css('display', 'none').fadeIn('slow');
+                }
+            });
+        });
+
+        $("#stu_mark_sem_drop").change(function () {              //on #degreedrop_stu change
+            var sid = localStorage.getItem("sid");
+            var sem = $("#stu_mark_sem_drop").val();
+        $.ajax({
+            url: 'PHP/stu_data.php',
+            method: 'post',
+            data: 'Regno=' + sid + '&sem_marks=' + sem
+        }).done(function (results) {
+            //console.log(results[0].ID);
+            results = JSON.parse(results);
+            get_results_stu(results[0].ID);
+        })
+    });
+
+    function get_results_stu(str){
+        var sid = localStorage.getItem("sid");
+        //console.log(str);
+        $.ajax({
+            url: 'PHP/stu_data.php',
+            method: 'post',
+            data: 'Regno=' + sid + '&Mark_ID=' + str 
+        }).done(function (results) {
+            //console.log(results);
+            results = JSON.parse(results);
+            //console.log(results);
+            $('#marks_table').empty();
+            $('#marks_table').append('<thead><tr data-status="approved"><td>No</td><td></td><td>Module</td><td>Mark</td><td></td><td><span class="badge badge-outline-dark">Status</span></td></tr></thead><tbody>');
+
+            results.forEach(function(results){
+                //console.log(results);
+                var subs = new Array();
+                var allPropertyNames = Object.keys(results);
+                for (var j=0; j<allPropertyNames.length; j++) {
+                    var name = allPropertyNames[j];
+                    if((name != "ID")&&(name != 'regno')&&(name != 'SGPA')&&(name != 'NO')&&(name != 'complete')&&(name != 'remark')){
+                        subs.push(name);
+                        }
+                    }
+                    var i =1;
+                    subs.forEach(function(subs){
+                        var str = Statusbtn(results[subs]);
+                        var str1 = Statusbadge(results[subs]);
+                        $('#marks_table').append('<tr data-status="'+ str1 +'"><td>'+ i +'</td><td></td><td>'+ subs +'</td><td>'+ results[subs] +'</td><td></td><td>'+ str +'</td> </tr>');
+                        i++;
+                    })
+            })
+            $('#marks_table').append('</tbody>');
+        })
+
+        function Statusbtn(str){
+            var temp="";
+            if ((str == "A+")||(str == 'A')||(str == 'A-')||(str == 'B+')||(str == 'B')||(str == 'B-')||(str == 'C+')||(str == 'C')){
+                temp = '<span class="badge badge-success">Passed</span>';
+            }else{
+                temp = '<span class="badge badge-danger">Repeat</span>';
+            }
+            return temp;
+        }
+
+        function Statusbadge(str){
+            var temp="";
+            if ((str == "A+")||(str == 'A')||(str == 'A-')||(str == 'B+')||(str == 'B')||(str == 'B-')||(str == 'C+')||(str == 'C')){
+                temp = 'approved';
+            }else{
+                temp = 'suspended';
+            }
+            return temp;
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

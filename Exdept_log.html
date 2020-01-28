@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Examination Department</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="user-name" data-toggle="dropdown"><strong>Ex Dept</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content p-l-0 p-r-0">
+                <div class="tab-pane active" id="admin">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="Exdept_upload_file.html"><i class="icon-home"></i><span>Sheet Upload</span></a></li>
+                            <li class="active"><a href="Exdept_view_file.html"><i class="icon-home"></i><span>View Sheet</span></a></li>
+                            <li class="active"><a href="Exdept_log.html"><i class="icon-home"></i><span>Login Table</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <div class="bh_chart hidden-xs">
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>View Login Data Sheet</h2>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table m-b-0" id="examlogtable" name="examlogtable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Student</th>
+                                            <th>Adress</th>
+                                            <th>Logged Time</th>
+                                            <th>END Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><span>Hughe L.</span></td>
+                                            <td><span class="text-info">4 Shirley Ave. West Chicago, IL 60185</span></td>
+                                            <td>Sept 18, 2017</td>
+                                            <td>Sept 18, 2017</td>
+                                            <td><span class="badge badge-success">Admit</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="js/examdepjs.js"></script>
+<script>
+    $('.sparkbar').sparkline('html', { type: 'bar' });
+</script>
+</body>
+
+<!-- Mirrored from www.wrraptheme.com/templates/lucid/university/html/light/table-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jul 2019 04:59:38 GMT -->
+</html>

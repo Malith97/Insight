@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Student Dashboard</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
+<link rel="stylesheet" href="assets/vendor/chartist/css/chartist.min.css">
+<link rel="stylesheet" href="assets/vendor/nestable/jquery-nestable.css"/>
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<input type="hidden" name="sid" id="sid" />
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-danger"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Error on website analytics configurations</p>
+                                                <span class="timestamp">Yesterday</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span><strong>Welcome,</strong></span>
+                    <a href="javascript:void(0);" class="user-name" id="sname" name="sname" data-toggle="dropdown"></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content p-l-0 p-r-0">
+                <div class="tab-pane active" id="admin">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="stu_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Lecture Notes</span> </a>
+                                <ul>
+                                    <li><a href="stu_current_semesters.html">Current Semester</a></li>
+                                    <li><a href="stu_other_semesters.html">Other Semesters</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="stu_gpa.html"><i class="icon-users"></i><span>GPA Calculation</span></a></li>
+                            <li><a href="stu_assignments.html"><i class="icon-users"></i><span>Assignments</span></a></li>
+                            <li><a href="stu_quiz.html"><i class="icon-user"></i>Quizzes</a></li>
+                            <li><a href="stu_attendance.html"><i class="icon-users"></i><span>Attendance</span></a></li>
+                            <li><a href="stu_marks.html"><i class="icon-users"></i><span>Marks</span></a></li>
+                            <li><a href="stu_chatapp.html"><i class="icon-users"></i><span>Chat-Box</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Other</span> </a>
+                                <ul>
+                                    <li><a href="stu_upload_medical.html"><i class="icon-control-pause"></i><span>Medical</span> </a></li>
+                                    <li><a href="stu_staff.html"><i class="icon-control-pause"></i><span>Staff</span></a></li>
+                                    <li><a href="stu_view_notice.html"><i class="icon-control-pause"></i><span>Noticeboard</span> </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <!--Gauge Nobs Starts-->
+                <div class="col-lg-3">
+                    <div class="card">                   
+                        <div class="body text-center">
+                            <input type="text" class="knob" value="65" data-width="125" data-height="125" data-thickness="0.25" data-fgColor="#cb8f27" readonly>
+                            <br></br>
+                            <p class="text-muted m-b-0">GPA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">                   
+                        <div class="body text-center">
+                            <input type="text" class="knob" value="65" data-width="125" data-height="125" data-thickness="0.25" data-fgColor="#64c8c0" readonly>
+                            <br></br>
+                            <p class="text-muted m-b-0">ASSIGNMENTS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">                   
+                        <div class="body text-center">                            
+                            <input type="text" class="knob" value="65" data-width="125" data-height="125" data-thickness="0.25" data-fgColor="#cb8fe7" readonly>
+                            <br></br>
+                            <p class="text-muted m-b-0">QUIZZES</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">                   
+                        <div class="body text-center">                            
+                                <input type="text" class="knob" value="65" data-width="125" data-height="125" data-thickness="0.25" data-fgColor="#be9996" readonly>
+                                <br></br>
+                            <p class="text-muted m-b-0">OVERALL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Gauge Nobs Ends-->
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>University Income</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div id="university_income" class="chartist text-center"></div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>Students</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="sparkline" data-type="line" data-spot-Radius="1" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#222"
+                                        data-min-Spot-Color="rgb(233, 30, 99)" data-max-Spot-Color="rgb(0, 150, 136)" data-spot-Color="rgba(3, 116, 192, 0.7)"
+                                        data-offset="90" data-width="100%" data-height="70" data-line-Width="1" data-line-Color="#b089ff"
+                                        data-fill-Color="#ebe1ff">1,8,2,5,6,7,3,4,1,9,3,7,2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>University Expanse</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="70" data-bar-Width="10" data-bar-Spacing="10" data-bar-Color="#02b5b2">2,8,3,4,6,2,3,8,7,6,5,2,1,8</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>Exam Toppers</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>First Name</th>
+                                                    <th>Charts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Dean Otto</td>
+                                                    <td>
+                                                        <span class="sparkbar">5,8,6,3,-5,9,2</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>K. Thornton</td>
+                                                    <td>
+                                                    <span class="sparkbar">10,-8,-9,3,5,8,5</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kane D.</td>
+                                                    <td>
+                                                        <span class="sparkbar">7,5,9,3,5,2,5</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jack Bird</td>
+                                                    <td>
+                                                        <span class="sparkbar">10,8,1,-3,-3,-8,7</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hughe L.</td>
+                                                    <td>
+                                                        <span class="sparkbar">2,8,9,8,5,1,5</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jack Bird</td>
+                                                    <td>
+                                                        <span class="sparkbar">1,8,2,3,9,8,5</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hughe L.</td>
+                                                    <td>
+                                                        <span class="sparkbar">10,8,-1,-3,2,8,-5</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>Feeds <small>Description text here...</small></h2>
+                                </div>
+                                <div class="body">                            
+                                    <ul class="list-unstyled feeds_widget">
+                                        <li>
+                                            <div class="feeds-left"><i class="fa fa-thumbs-o-up"></i></div>
+                                            <div class="feeds-body">
+                                                <h4 class="title">7 New Feedback <small class="float-right text-muted">Today</small></h4>
+                                                <small>It will give a smart finishing to your site</small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="feeds-left"><i class="fa fa-user"></i></div>
+                                            <div class="feeds-body">
+                                                <h4 class="title">New User <small class="float-right text-muted">10:45</small></h4>
+                                                <small>I feel great! Thanks team</small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="feeds-left"><i class="fa fa-question-circle"></i></div>
+                                            <div class="feeds-body">
+                                                <h4 class="title text-warning">Server Warning <small class="float-right text-muted">10:50</small></h4>
+                                                <small>Your connection is not private</small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="feeds-left"><i class="fa fa-check"></i></div>
+                                            <div class="feeds-body">
+                                                <h4 class="title text-danger">Issue Fixed <small class="float-right text-muted">11:05</small></h4>
+                                                <small>WE have fix all Design bug with Responsive</small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="feeds-left"><i class="fa fa-shopping-basket"></i></div>
+                                            <div class="feeds-body">
+                                                <h4 class="title">7 New Orders <small class="float-right text-muted">11:35</small></h4>
+                                                <small>You received a new oder from Tina.</small>
+                                            </div>
+                                        </li>                                   
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <!--<div class="card">
+                        <div class="header">
+                            <h2>University Stats</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="sparkline-pie">6,4,8,1</div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="progress-container m-b-20">
+                                        <span class="progress-badge">Staff</span>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
+                                                <span class="progress-value">86%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-container m-b-20">
+                                        <span class="progress-badge">Boys</span>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100" style="width: 36%;">
+                                                <span class="progress-value">36%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-container m-b-20">
+                                        <span class="progress-badge">Girls</span>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 23%;">
+                                                <span class="progress-value">23%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-container m-b-10">
+                                        <span class="progress-badge">Management</span>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                                                <span class="progress-value">5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="row clearfix">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="card top_counter">
+                                <div class="body">
+                                    <div class="icon text-info"><i class="fa fa-user"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Total Student</div>
+                                        <h5 class="number">530</h5>
+                                    </div>
+                                    <hr>
+                                    <div class="icon text-warning"><i class="fa fa-user-circle"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Total Teacher</div>
+                                        <h5 class="number">14</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6">
+                            <div class="card top_counter">
+                                <div class="body">
+                                    <div class="icon text-warning"><i class="fa fa-tags"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Department</div>
+                                        <h5 class="number">7</h5>
+                                    </div>
+                                    <hr>
+                                    <div class="icon"><i class="fa fa-graduation-cap"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Courses</div>
+                                        <h5 class="number">35</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <h2>Sortable With Task List</h2>
+                        </div>
+                        <div class="body todo_list">
+                            <div class="dd nestable-with-handle">
+                                <ol class="dd-list">
+                                    <li class="dd-item dd3-item" data-id="1">
+                                        <div class="dd-handle dd3-handle"></div>
+                                        <div class="dd3-content">
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox" name="checkbox" checked>
+                                                <span>OOP Assignment</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="dd-item dd3-item" data-id="1">
+                                        <div class="dd-handle dd3-handle"></div>
+                                        <div class="dd3-content">
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox" name="checkbox">
+                                                <span>SPE Inclass assignment</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="dd-item dd3-item" data-id="1">
+                                        <div class="dd-handle dd3-handle"></div>
+                                        <div class="dd3-content">
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox" name="checkbox">
+                                                <span>Make the Presentation</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="dd-item dd3-item" data-id="1">
+                                        <div class="dd-handle dd3-handle"></div>
+                                        <div class="dd3-content">
+                                            <label class="fancy-checkbox">
+                                                <input type="checkbox" name="checkbox">
+                                                <span>Finish Software project</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Visit By Traffic Types <small>8% High then last month</small></h2>
+                        </div>
+                        <div class="body text-center">                            
+                            <div class="sparkline-pie2">6,4,8</div>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-hover m-b-0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <small>Page Views</small>
+                                                <h5 class="m-b-0">32,211,536</h5>
+                                            </td>
+                                            <td>
+                                                <div class="sparkline m-t-10" data-type="bar" data-width="97%" data-height="26px" data-bar-Width="4" data-bar-Spacing="7" data-bar-Color="#11a0f8">2,3,5,6,9,8,7,8,7,4,6,5</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <small>Site Visitors</small>
+                                                <h5 class="m-b-0">23,516</h5>
+                                            </td>
+                                            <td>
+                                                <div class="sparkline m-t-10" data-type="bar" data-width="97%" data-height="26px" data-bar-Width="4" data-bar-Spacing="7" data-bar-Color="#11a0f8">8,5,3,2,2,3,5,6,4,5,7,5</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <small>Total Clicks</small>
+                                                <h5 class="m-b-0">4,536</h5>
+                                            </td>
+                                            <td>
+                                                <div class="sparkline m-t-10" data-type="bar" data-width="97%" data-height="26px" data-bar-Width="4" data-bar-Spacing="7" data-bar-Color="#11a0f8">6,5,4,6,5,5,2,3,1,8,4,2</div>
+                                            </td>
+                                        </tr>                                 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8">
+                    <div class="card visitors-map">
+                        <div class="header">
+                            <h2>Our Location</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">                            
+                            <div class="row location_list text-center">
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-turquoise">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
+                                        <span>America</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-khaki">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="24" data-speed="2500" data-fresh-interval="700">24</h4>
+                                        <span>Australia</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-parpl">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="15" data-speed="2500" data-fresh-interval="700">15</h4>
+                                        <span>Canada</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-salmon">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="33" data-speed="2500" data-fresh-interval="700">33</h4>
+                                        <span>India</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="world-map-markers2" style="height: 300px;" class="jvector-map m-t-20"></div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>New Admission List</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">                          
+                            <div class="table-responsive">
+                                <table class="table table-hover m-b-0">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Age</th>
+                                            <th>Address</th>
+                                            <th>Number</th>
+                                            <th>Department</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="list-name">OU 00456</span></td>
+                                            <td>Joseph</td>
+                                            <td>25</td>
+                                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                                            <td>404-447-6013</td>
+                                            <td><span class="badge badge-primary">MCA</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">KU 00789</span></td>
+                                            <td>Cameron</td>
+                                            <td>27</td>
+                                            <td>123 6th St. Melbourne, FL 32904</td>
+                                            <td>404-447-4569</td>
+                                            <td><span class="badge badge-warning">Medical</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">KU 00987</span></td>
+                                            <td>Alex</td>
+                                            <td>23</td>
+                                            <td>123 6th St. Melbourne, FL 32904</td>
+                                            <td>404-447-7412</td>
+                                            <td><span class="badge badge-info">M.COM</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">OU 00951</span></td>
+                                            <td>James</td>
+                                            <td>23</td>
+                                            <td>44 Shirley Ave. West Chicago, IL 60185</td>
+                                            <td>404-447-2589</td>
+                                            <td><span class="badge badge-default">MBA</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">OU 00456</span></td>
+                                            <td>Joseph</td>
+                                            <td>25</td>
+                                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                                            <td>404-447-6013</td>
+                                            <td><span class="badge badge-primary">MCA</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">OU 00953</span></td>
+                                            <td>charlie</td>
+                                            <td>21</td>
+                                            <td>123 6th St. Melbourne, FL 32904</td>
+                                            <td>404-447-9632</td>										
+                                            <td><span class="badge badge-success">BBA</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/chartist.bundle.js"></script>
+<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+
+<script src="assets/vendor/jquery-knob/jquery.knob.min.js"></script>
+<script src="assets/js/pages/charts/jquery-knob.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/index.js"></script>
+
+<script src="assets/vendor/nestable/jquery.nestable.js"></script> <!-- Jquery Nestable -->
+<script src="assets/js/pages/ui/sortable-nestable.js"></script> 
+
+<script src="JS/student.js"></script>
+<script language="javascript">
+    //var name = localStorage.getItem("name");
+    //console.log(name);
+    document.getElementById("sid").value = localStorage.getItem("sid");
+    document.getElementById("sname").innerHTML = '&nbsp;' + localStorage.getItem("sname");
+    
+</script>
+</body>
+
+</html>

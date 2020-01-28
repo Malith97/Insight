@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Add Professor</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/dropify/css/dropify.min.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="adm_index.html"><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>                
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>     
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Admin</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+                       <!-- Tab panes -->
+            <div class="tab-pane active" id="sub_menu">
+                <div class="tab-pane" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="adm_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Attendance</span> </a>
+                                <ul>
+                                    <li><a href="adm_update_attendance.html">Update Attendance</a></li>
+                                    <li><a href="adm_view_attendance.html">View Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="has-arrow"><i class="icon-users"></i><span>Time-Table</span></a>
+                                <ul>
+                                    <li><a href="adm_upload_timetable.html">Upload Time-Table</a></li>
+                                    <li><a href="adm_view_timetable.html">View Time-Table</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="adm_down_medical.html" class="active"><i class="icon-control-pause"></i><span>Medical Forms</span> </a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Noticeboard</span> </a>
+                                <ul>
+                                    <li><a href="adm_upload_notice.html">Update Noticeboard</a></li>
+                                    <li><a href="adm_view_notice.html">View Noticeboard</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Other</span> </a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Add</span> </a>
+                                    <ul>
+                                        <li><a href="adm_add_professors.html"><i class="icon-users"></i> <span>Professors</span></a></li>
+                                        <li><a href="adm_add_students.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>View</span> </a>
+                                    <ul>
+                                        <li><a href="adm_view_staff.html"><i class="icon-users"></i> <span>Staff</span></a></li>
+                                        <li><a href="adm_students_list.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <form action="PHP/adm_upload_data.php" method="post" enctype="multipart/form-data">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        </div>
+                        <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Enter Details</strong></h2> 
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Post" name="post">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Contact No" name="contact">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <select class="form-control show-tick" name="deg">
+                                        <option value="B.Sc">Bachelors</option>
+                                        <option value="M.Sc">Masters</option>
+                                        <option value="Dr">Doctor</option>
+                                        <option value="Prof">Professor</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" name="photo" id="file" onchange="javascript:updateList()">
+                                                <label class="custom-file-label" for="file-upload" id="fileList"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Qualifications</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <table>
+                                    <tbody>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Add Qualifications" name="qual">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="submit" id="addRow1" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Working Experience</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <table>
+                                    <tbody>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Add Working Experience" name="exp">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="submit" id="addRow2" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Publications</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <table>
+                                    <tbody>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Add Publications" name="pub">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="submit" id="addRow3" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Research Interests</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <table>
+                                    <tbody>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Add Research Areas" name="interesting">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="submit" id="addRow4" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Awards</h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <table>
+                                    <tbody>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Add Awards" name="awards">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="submit" id="addRow5" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-12" style="margin-left: 30em">
+                                    <button type="submit" name="add_lec" class="btn btn-success">Submit</button>
+                                    <button type="submit" class="btn btn-warning">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script>
+var html = '<div class="col-sm-12"><div class="form-group"><input type="text" class="form-control" placeholder="Add Awards"></div></div>';
+ 
+$(function() {
+    $('table').sortable();
+ 
+    $('#addRow1').click(function(){
+        $('table').append(html);
+    });
+ 
+    $(document).on('click', '.remove', function() {
+        $(this).parents('tr').remove();
+    });
+});
+</script>
+
+
+<script src="assets/vendor/dropify/js/dropify.min.js"></script>
+<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/forms/dropify.js"></script>
+
+<script src="JS/admin.js"></script>
+
+<script type="text/javascript">
+    updateList = function() {
+        var input = document.getElementById('file');
+        var output = document.getElementById('fileList');
+
+        for (var i = 0; i < input.files.length; ++i) {
+            output.innerHTML += '' + input.files.item(i).name + '';
+        }
+    }
+</script>
+
+</body>
+
+</html>

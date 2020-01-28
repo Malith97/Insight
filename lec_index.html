@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Lecturer Dashboard</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
+<link rel="stylesheet" href="assets/vendor/chartist/css/chartist.min.css">
+
+<link rel="stylesheet" href="assets/vendor/fullcalendar/fullcalendar.min.css">
+
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>
+    </div>
+</div>
+
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href=""><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-danger"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Error on website analytics configurations</p>
+                                                <span class="timestamp">Yesterday</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="user-name" data-toggle="dropdown"><strong>Lecturer</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content p-l-0 p-r-0">
+                <div class="tab-pane active" id="admin">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="lec_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Lecture Notes</span> </a>
+                                <ul>
+                                    <li><a href="lec_upload_lecnotes.html">Upload Lecture Notes</a></li>
+                                    <li><a href="lec_view_lecnotes.html">View Lecture Notes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="has-arrow"><i class="icon-users"></i><span>Assignments</span></a>
+                                <ul>
+                                    <li><a href="lec_upload_assignments.html">Upload Assignments</a></li>
+                                    <li><a href="lec_view_assignments.html">View Assignments</a></li>
+                                    <li><a href="lec_down_assignments.html">Download Assignments</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Quiz</span> </a>
+                                <ul>
+                                    <li><a href="lec_upload_quiz.html">Upload Quiz</a></li>
+                                    <li><a href="lec_view_quiz.html">View Quiz</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Progression</span> </a>
+                                <ul>
+                                    <li><a href="lec_quiz_questions.html">Quiz Results</a></li>
+                                    <li><a href="lec_quiz_results.html">Overall</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Notice Board</span> </a>
+                                <ul>
+                                    <li><a href="lec_upload_notice.html">Upload Notice Board</a></li>
+                                    <li><a href="lec_view_notice.html">View Notice Board</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <br>
+            <div class="row clearfix">
+                <div class="col-lg-8 col-md-12">
+                    <div class="card">
+
+
+                        
+                        <div class="header">
+                            <h2>Referrals</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <ul class="list-unstyled list-referrals">
+                                <li>
+                                    <p><span class="value">2301</span><span class="text-muted float-right">visits from Facebook</span></p>
+                                    <div class="progress progress-xs progress-transparent custom-color-blue">
+                                        <div class="progress-bar" data-transitiongoal="87"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><span class="value">2107</span><span class="text-muted float-right">visits from Twitter</span></p>
+                                    <div class="progress progress-xs progress-transparent custom-color-purple">
+                                        <div class="progress-bar" data-transitiongoal="34"></div>
+                                    </div>
+                                </li>                                
+                                <li>
+                                    <p><span class="value">2308</span><span class="text-muted float-right">visits from Search</span></p>
+                                    <div class="progress progress-xs progress-transparent custom-color-yellow">
+                                        <div class="progress-bar" data-transitiongoal="54"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><span class="value">1024</span><span class="text-muted float-right">visits from Affiliates</span></p>
+                                    <div class="progress progress-xs progress-transparent custom-color-green">
+                                        <div class="progress-bar" data-transitiongoal="67"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>Students</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="sparkline" data-type="line" data-spot-Radius="1" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#222"
+                                        data-min-Spot-Color="rgb(233, 30, 99)" data-max-Spot-Color="rgb(0, 150, 136)" data-spot-Color="rgba(3, 116, 192, 0.7)"
+                                        data-offset="90" data-width="100%" data-height="70" data-line-Width="1" data-line-Color="#b089ff"
+                                        data-fill-Color="#ebe1ff">1,8,2,5,6,7,3,4,1,9,3,7,2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>University Expanse</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="sparkline" data-type="bar" data-width="97%" data-height="70" data-bar-Width="10" data-bar-Spacing="10" data-bar-Color="#02b5b2">2,8,3,4,6,2,3,8,7,6,5,2,1,8</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>Contact List</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Conatct Name</th>
+                                                    <th>Contact No</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Vice Chancellor</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AR Office</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AR Computing</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dean Computing</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dean Engineering</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Computing HOD</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Faculty of Computing</td>
+                                                    <td>011 256 2596</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>Notifications</h2>
+                                </div>
+                                <div class="body">                            
+                                    <ul class="list-unstyled feeds_widget">
+                                        <li>
+                                            <div class="feeds-left"><i class="fa fa-thumbs-o-up"></i></div>
+                                        <div class="feeds-body">
+                                            <h4 class="title">Update Daily Attendance <small class="float-right text-muted">Now</small></h4>
+                                                <small>Update daily module attendance and send it </small>
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-user"></i></div>
+                                        <div class="feeds-body">
+                                            <h4 class="title">Meeting <small class="float-right text-muted">10:45</small></h4>
+                                                <small>Small Meeting with HOD</small>
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-question-circle"></i></div>
+                                        <div class="feeds-body">
+                                            <h4 class="title text-warning">Time Table <small class="float-right text-muted">10:50</small></h4>
+                                                <small>Make Next Week Timetables</small>
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-check"></i></div>
+                                        <div class="feeds-body">
+                                            <h4 class="title text-danger">Update Morning Sessions <small class="float-right text-muted">11:05</small></h4>
+                                                <small>Update the morning lecture sessions</small>
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-shopping-basket"></i></div>
+                                        <div class="feeds-body">
+                                            <h4 class="title">80% Check<small class="float-right text-muted">11:35</small></h4>
+                                                <small>Check the students who doesn't have 80%</small>
+                                        </div>
+                                </li>                                   
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="body">                            
+                            <div class="new_timeline">
+                                <div class="header">
+                                    <div class="color-overlay">
+                                        <div class="day-number">24</div>
+                                        <div class="date-right">
+                                        <div class="day-name">Wednesday</div>
+                                        <div class="month">Aug 2018</div>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="bullet pink"></div>
+                                        <div class="time">08am</div>
+                                        <div class="desc">
+                                            <h3>Data Structures and Algorithms</h3>
+                                            <h4>LT-A</h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bullet green"></div>
+                                        <div class="time">09:30am</div>
+                                        <div class="desc">
+                                            <h3>Neurology Team</h3>
+                                            <h4>Hangouts</h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bullet orange"></div>
+                                        <div class="time">11:30pm</div>
+                                        <div class="desc">
+                                            <h3>Lunch Break</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bullet green"></div>
+                                        <div class="time">12:30pm</div>
+                                        <div class="desc">
+                                            <h3>Arificial Algorithms</h3>
+                                            <h4>Go to Home</h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row clearfix">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="card top_counter">
+                                <div class="body">
+                                    <div class="icon text-info"><i class="fa fa-user"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Total Student</div>
+                                        <h5 class="number">530</h5>
+                                    </div>
+                                    <hr>
+                                    <div class="icon text-warning"><i class="fa fa-user-circle"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Total Lecturers</div>
+                                        <h5 class="number">14</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6">
+                            <div class="card top_counter">
+                                <div class="body">
+                                    <div class="icon text-warning"><i class="fa fa-tags"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Department</div>
+                                        <h5 class="number">2</h5>
+                                    </div>
+                                    <hr>
+                                    <div class="icon"><i class="fa fa-graduation-cap"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Courses</div>
+                                        <h5 class="number">5</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6">
+                            <div class="card top_counter">
+                                <div class="body">
+                                    <div class="icon text-danger"><i class="fa fa-credit-card"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Expense</div>
+                                        <h5 class="number">$3205</h5>
+                                    </div>
+                                    <hr>
+                                    <div class="icon text-success"><i class="fa fa-university"></i> </div>
+                                    <div class="content">
+                                        <div class="text">Income</div>
+                                        <h5 class="number">$35,325</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Faculty Members<small>8% High then last year</small></h2>
+                        </div>
+                        <div class="body text-center">                            
+                            <div class="sparkline-pie2">5,16,321</div>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-hover m-b-0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <small>Total No of Students</small>
+                                                <h5 class="m-b-0">321</h5>
+                                            </td>
+                                            <td>
+                                                <div class="sparkline m-t-10" data-type="bar" data-width="97%" data-height="26px" data-bar-Width="4" data-bar-Spacing="7" data-bar-Color="#11a0f8">2,3,5,6,9,8,7,8,7,4,6,5</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <small>Total No of Lecturers</small>
+                                                <h5 class="m-b-0">16</h5>
+                                            </td>
+                                            <td>
+                                                <div class="sparkline m-t-10" data-type="bar" data-width="97%" data-height="26px" data-bar-Width="4" data-bar-Spacing="7" data-bar-Color="#11a0f8">8,5,3,2,2,3,5,6,4,5,7,5</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <small>No of Staff Members</small>
+                                                <h5 class="m-b-0">5</h5>
+                                            </td>
+                                            <td>
+                                                <div class="sparkline m-t-10" data-type="bar" data-width="97%" data-height="26px" data-bar-Width="4" data-bar-Spacing="7" data-bar-Color="#11a0f8">6,5,4,6,5,5,4,3,4,8,4,2</div>
+                                            </td>
+                                        </tr>                                 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8">
+                    <div class="card visitors-map">
+                        <div class="header">
+                            <h2>Our Location</h2>
+                            <ul class="header-dropdown">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">                            
+                            <div class="row location_list text-center">
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-turquoise">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="53" data-speed="2500" data-fresh-interval="700">53</h4>
+                                        <span>America</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-khaki">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="24" data-speed="2500" data-fresh-interval="700">24</h4>
+                                        <span>Australia</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-parpl">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="15" data-speed="2500" data-fresh-interval="700">15</h4>
+                                        <span>Canada</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="body xl-salmon">
+                                        <i class="fa fa-map-marker"></i>
+                                        <h4 class="number count-to" data-from="0" data-to="33" data-speed="2500" data-fresh-interval="700">33</h4>
+                                        <span>India</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="world-map-markers2" style="height: 300px;" class="jvector-map m-t-20"></div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Lecturer Details</h2>
+                        </div>
+                        <div class="body">                          
+                            <div class="table-responsive">
+                                <table class="table table-hover m-b-0">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Address</th>
+                                            <th>Number</th>
+                                            <th>Department</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="list-name">OU 00456</span></td>
+                                            <td>Dr.Pradeep Kalansooriya</td>
+                                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                                            <td>077-447-6013</td>
+                                            <td><span class="badge badge-primary">CS</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">KU 00789</span></td>
+                                            <td>Dr.Wijendra Gunathilake</td>
+                                            <td>123 6th St. Melbourne, FL 32904</td>
+                                            <td>071-447-4569</td>
+                                            <td><span class="badge badge-warning">IT</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">KU 00987</span></td>
+                                            <td>Mr.Buddhitha Hettige</td>
+                                            <td>123 6th St. Melbourne, FL 32904</td>
+                                            <td>075-447-7412</td>
+                                            <td><span class="badge badge-info">CE</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">OU 00951</span></td>
+                                            <td>Mrs.Punsisi Premathilaka</td>
+                                            <td>44 Shirley Ave. West Chicago, IL 60185</td>
+                                            <td>077-447-2589</td>
+                                            <td><span class="badge badge-default">IT</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">OU 00456</span></td>
+                                            <td>Ms.Akilani Wijethilaka</td>
+                                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                                            <td>077-447-6013</td>
+                                            <td><span class="badge badge-primary">CS</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list-name">OU 00953</span></td>
+                                            <td>Ms.Kalani Ilmini</td>
+                                            <td>123 6th St. Melbourne, FL 32904</td>
+                                            <td>071-447-9632</td>										
+                                            <td><span class="badge badge-success">CS</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/chartist.bundle.js"></script>
+<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+
+<script src="assets/vendor/jquery-knob/jquery.knob.min.js"></script>
+<script src="assets/js/pages/charts/jquery-knob.js"></script>
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/index.js"></script>
+
+<script src="assets/js/pages/calendar.js"></script>
+<script src="assets/bundles/fullcalendarscripts.bundle.js"></script>
+
+<script>
+    // progress bars
+    $('.progress .progress-bar').progressbar({
+            display_text: 'none'
+    });
+</script>
+</body>
+
+</html>

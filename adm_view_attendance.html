@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>View Attendance</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+<link rel="stylesheet" href="assets/vendor/parsleyjs/css/parsley.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="adm_index.html"><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>                
+
+                <div id="navbar-menu">
+                <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="PHP/logout.php" class="icon-menu"><i class="icon-login"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="user-name" data-toggle="dropdown"><strong>Admin</strong></a>
+                </div>
+                <hr>
+                <ul class="row list-unstyled">
+                    <li class="col-4">
+                        <span>Exp</span>
+                        <h6>14</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Awards</span>
+                        <h6>13</h6>
+                    </li>
+                    <li class="col-4">
+                        <span>Clients</span>
+                        <h6>213</h6>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Tab panes -->
+            <div class="tab-pane active" id="sub_menu">
+                <div class="tab-pane" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="adm_index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Attendance</span> </a>
+                                <ul>
+                                    <li><a href="adm_update_attendance.html">Update Attendance</a></li>
+                                    <li><a href="adm_view_attendance.html">View Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="has-arrow"><i class="icon-users"></i><span>Time-Table</span></a>
+                                <ul>
+                                    <li><a href="adm_upload_timetable.html">Upload Time-Table</a></li>
+                                    <li><a href="adm_view_timetable.html">View Time-Table</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="adm_down_medical.html" class="active"><i class="icon-control-pause"></i><span>Medical Forms</span> </a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Noticeboard</span> </a>
+                                <ul>
+                                    <li><a href="adm_upload_notice.html">Update Noticeboard</a></li>
+                                    <li><a href="adm_view_notice.html">View Noticeboard</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Other</span> </a>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Add</span> </a>
+                                    <ul>
+                                        <li><a href="adm_add_professors.html"><i class="icon-users"></i> <span>Professors</span></a></li>
+                                        <li><a href="adm_add_students.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>View</span> </a>
+                                    <ul>
+                                        <li><a href="adm_view_staff.html"><i class="icon-users"></i> <span>Staff</span></a></li>
+                                        <li><a href="adm_students_list.html"><i class="icon-users"></i> <span>Students</span></a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>View Attendance</h2>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>                            
+                            <li class="breadcrumb-item">Attendance</li>
+                            <li class="breadcrumb-item active">View Attendance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="body">
+                            <form action="PHP/createpdf.php" method="post" role="form">
+                                <input type="hidden" value="" id="degreename" name="degreename">
+                                <label>Select The Intake</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label style="width: 90px;" class="input-group-text" for="Intake">Intake</label>
+                                    </div>
+                                    <select class="intdropclass custom-select" id="intdrop1" name="intdrop1">
+                                        <option selected>Choose...</option>
+                                    </select>
+                                </div>
+
+                                <label>Select The Degree Programme</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label style="width: 90px;" class="input-group-text" for="degree">Degree</label>
+                                    </div>
+                                    <select class="degdropclass custom-select" id="degdrop1" name="degdrop1">
+                                        <option selected>Choose...</option>
+                                    </select>
+                                </div>
+
+                                <label>Select The Semester</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label style="width: 90px;" class="input-group-text" for="Semester">Semester</label>
+                                    </div>
+                                    <select class="semdropclass custom-select" id="semdrop1" name="semdrop1">
+                                        <option value="" selected disabled hidden>Choose...</option>
+                                    </select>
+                                </div>
+
+                                <label for="Modules">Select The Module</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label style="width: 90px;" for="Modules" class="input-group-text">Module</label>
+                                    </div>
+                                    <select class="custom-select" name="moduledrop1" id="moduledrop1">
+                                        <option value="" selected disabled hidden>Choose...</option>
+                                    </select>
+                                </div>
+
+                                <br>
+                                <div style="padding-left: 300px;">
+                                <button type="button" id="Loadatt" class="btn btn-success" value="Load Module Attendance">View Module Attendance</button>
+                                <button id="Loadattsumm" type="button" value="Load Attendance Summery" class="btn btn-warning">View Atttendance Summery</button>
+                                <button name="Print" type="submit" value="Print" class="btn btn-danger">Print</button>
+                                </div>
+
+                                <br></br>
+                                <label>Attendance Summery</label>
+
+                                <div class="body">
+                                    <div class="table-responsive">
+                                        <table class="table m-b-0" id="view_attendance"></table>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+<script src="assets/vendor/parsleyjs/js/parsley.min.js"></script>
+
+<script src="assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> <!-- Bootstrap Colorpicker Js --> 
+<script src="assets/vendor/jquery-inputmask/jquery.inputmask.bundle.js"></script> <!-- Input Mask Plugin Js --> 
+<script src="assets/vendor/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+<script src="assets/vendor/multi-select/js/jquery.multi-select.js"></script> <!-- Multi Select Plugin Js -->
+<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> <!-- Bootstrap Tags Input Plugin Js --> 
+<script src="assets/vendor/nouislider/nouislider.js"></script> <!-- noUISlider Plugin Js --> 
+    
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/forms/advanced-form-elements.js"></script>
+    
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+
+<script src="JS/admin.js"></script>  <!-- Custom JS Functions -->
+
+<script>
+    $(function() {
+        // validation needs name of the element
+        $('#food').multiselect();
+
+        // initialize after multiselect
+        $('#basic-form').parsley();
+    });
+    </script>
+</body>
+</html>
+
